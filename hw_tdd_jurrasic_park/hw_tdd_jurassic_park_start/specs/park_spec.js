@@ -5,8 +5,11 @@ const Dinosaur = require('../models/dinosaur.js');
 describe('Park', function() {
 
   beforeEach(function () {
-
+    const dino1 = new Dinosaur('Tyranosaurus', 'carnivore', )
+    const dino2 = new Dinosaur('Stegosaurus', 'herbivore', 50)
+    park = new Park('Jurassic Park', 200, [dino1, dino2])
   })
+})
 
   it('should have a name');
 

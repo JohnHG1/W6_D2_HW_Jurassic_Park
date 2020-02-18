@@ -45,24 +45,34 @@ describe('Park', function() {
     assert.deepStrictEqual(actual, [dino1])
   });
 
-  //
-  // it('should be able to find most popular dinosaur', function(){
-  //   const actual = collectOfDinosaurs.guestsAttractedPerDay;
-  //   assert.strictEqual(actual, [dino1])
-  // });
+
+//   it('should be able to find most popular dinosaur', function(){
+//     const actual = collectOfDinosaurs.guestsAttractedPerDay;
+//     assert.strictEqual(actual, [dino1])
+//   });
 // });
 //
-  it('should be able to find species', function(){
-    park.findSpecies(dino1);
-    const actual = park.collectOfDinosaurs
-    assert.strictEqual(actual, [dino1])
-  };
+//
+//   it('should be able to find species', function(){
+//     park.findSpecies(dino1);
+//     const actual = park.collectOfDinosaurs
+//     assert.strictEqual(actual, [dino1])
+//   };
 
+  it('should be able to calculate the
+  total number of visitors per day', function(){
+    const actual = park.visitorsPerDay()
+    assert.strictEqual(actual, 200)
+  });
+  //
+  // it('should be able to calculate the    total number of visitors per year', function() {
+  //   const actual = park.visitorsPerYear()
+  //   assert.strictEqual(actual, 73000)
+  // });
+  //
+  //  it('should be able to calculate total revenue for one year', function() {
+  //     const actual = park.yearlyRevenue()
+  //     assert.strictEqual(actual, 14600000)
+  //   });
 
-//   it('should be able to calculate the total number of visitors per day');
-//
-//   it('should be able to calculate the total number of visitors per year');
-//
-//   it('should be able to calculate total revenue for one year');
-//
 });

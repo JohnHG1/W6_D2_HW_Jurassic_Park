@@ -1,7 +1,7 @@
-const Park = function(name, price, collectOfDinosaurs){
+const Park = function(name, ticketPrice, collectOfDinosaurs){
 
   this.name = name;
-  this. price = price;
+  this. ticketPrice = ticketPrice;
   this.collectOfDinosaurs = collectOfDinosaurs;
 }
 
@@ -15,27 +15,46 @@ Park.prototype.removeDinosaur = function(dinosaur){
   this.collectOfDinosaurs.splice(indexOfDinosaurs, 1);
 }
 
-// Park.prototype.findMostPopularDinosaur = function() {
-//   const
+// zsolt code
+// Park.prototype.removeDinosaur = function(dinoToRemove){
+//   const indexOfDinosaurs = this.dinosaur.splice(indexOfDinosaurs, 1);
 // }
-//
-// Park.prototype.findSpecies = function(species){
+
+
+// Park.prototype.findMostPopularDinosaur = function(){
+//   let MostPopularDinosaur - this.dinosaur[0];
+//   for (let dino of this.dinosaurs){if(MostPopularDinosaur.guestsAttractedPerDay < dino.guestsAttractedPerDay)}
+//   MostPopularDinosaur = dino;
+//     }
+//   }
+//   return MostPopularDinosaur
+// };
+
+
+// //
+// Park.prototype.findSpecies = function(inputSpecies){
 //   this.collectOfDinosaurs.find(species)
 // }
 
-Park.prototype.visitorsPerDay = function() {
-  let totalVisitors = 0;
-  for (dinosaur of this.collectionOfDinosaurs) {
-    totalVisitors += dinosaur.guestsAttractedPerDay
-     }
-    return totalVisitors
-   }
+
+
+// Park.prototype.find TotalNumberOfVisitorsPerDay = function() {
+//   let TotalNumberOfVisitorsPerDay = 0;
+//   const TotalNumberOfVisitorsPerDay = 0;
+//   for (dinosaur of this.collectionOfDinosaurs) {
+//     TotalNumberOfVisitorsPerDay += dinosaur.guestsAttractedPerDay
+//      }
+//      return totalNumberOfVisitorsPerDay
+//   }
+
 //
-// Park.prototype.visitorsPerYear = function () {
-//   return this.visitorsPerDay() * 365;
+// Park.prototype.findTotalNumberOfVisitorsPerDayr = function () {
+//   return this.findTotalNumberOfVisitorsPerDay() * 365;
 // };
 //
-// Park.prototype.yearlyRevenue = function () {
+
+
+// Park.prototype.calculateYearlyRevenue = function () {
 //   return this.visitorsPerYear() * this.price;
 // };
 

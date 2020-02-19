@@ -9,8 +9,8 @@ describe('Park', function() {
   let dino2;
 
   beforeEach(function () {
-    dino1 = new Dinosaur('Tyranosaurus', 'carnivore', 150 )
-    dino2 = new Dinosaur('Stegosaurus', 'herbivore', 50)
+    dino1 = new Dinosaur('Tyranosaurus', 'carnivore', 1500 )
+    dino2 = new Dinosaur('Stegosaurus', 'herbivore', 250)
     park = new Park('Jurassic Park', 200, [dino1, dino2])
 
   })
@@ -22,7 +22,7 @@ describe('Park', function() {
   });
 
   it('should have a ticket price', function(){
-    const actual = park.price;
+    const actual = park.ticketPrice;
     assert.strictEqual(actual, 200)
   });
 
@@ -32,7 +32,7 @@ describe('Park', function() {
   });
 
   it('should be able to add a dinosaur to its collection', function(){
-    const dino3 = new Dinosaur('Triceratops', 'herbivore', 80)
+    const dino3 = new Dinosaur('Triceratops', 'herbivore', 180)
     park.addDinosaur(dino3);
     const actual = park.collectOfDinosaurs
     assert.deepStrictEqual(actual, [dino1, dino2, dino3])
@@ -46,31 +46,48 @@ describe('Park', function() {
   });
 
 
+// zsolt code
+    // it('should be able to remove a dinosaur from its collection', function(){
+    //   park.addDinosaur(dino1);
+    //   park.addDinosaur(dino2);
+    //   park.removeDinosaur(dino1);
+    //   const actual = park.collectOfDinosaurs
+    //   assert.deepStrictEqual(actual, [dino2])
+    // });
+
+
 //   it('should be able to find most popular dinosaur', function(){
+//     park.addDinosaur
 //     const actual = collectOfDinosaurs.guestsAttractedPerDay;
 //     assert.strictEqual(actual, [dino1])
 //   });
 // });
 //
 //
-//   it('should be able to find species', function(){
-//     park.findSpecies(dino1);
-//     const actual = park.collectOfDinosaurs
-//     assert.strictEqual(actual, [dino1])
-//   };
-
-  it('should be able to calculate the
-  total number of visitors per day', function(){
-    const actual = park.visitorsPerDay()
-    assert.strictEqual(actual, 200)
-  });
+  // it('should be able to find species', function(){
+  //   park.findSpecies(dino1);
+  //   const actual = park.collectOfDinosaurs
+  //   assert.strictEqual(actual, [dino1])
+  // };
   //
+
+
+  // it('should be able to calculate the
+  // total number of visitors per day', function(){
+  //   const actual = park.visitorsPerDay();
+  //   assert.strictEqual(actual, 200);
+  // });
+
+
+
   // it('should be able to calculate the    total number of visitors per year', function() {
   //   const actual = park.visitorsPerYear()
   //   assert.strictEqual(actual, 73000)
   // });
   //
-  //  it('should be able to calculate total revenue for one year', function() {
+
+
+  //  it('should be able to calculate yearly revenue for one year', function() {
   //     const actual = park.yearlyRevenue()
   //     assert.strictEqual(actual, 14600000)
   //   });

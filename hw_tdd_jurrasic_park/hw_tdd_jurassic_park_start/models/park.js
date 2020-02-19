@@ -38,24 +38,24 @@ Park.prototype.removeDinosaur = function(dinosaur){
 
 
 
-// Park.prototype.find TotalNumberOfVisitorsPerDay = function() {
-//   let TotalNumberOfVisitorsPerDay = 0;
-//   const TotalNumberOfVisitorsPerDay = 0;
-//   for (dinosaur of this.collectionOfDinosaurs) {
-//     TotalNumberOfVisitorsPerDay += dinosaur.guestsAttractedPerDay
-//      }
-//      return totalNumberOfVisitorsPerDay
-//   }
-
-//
-// Park.prototype.findTotalNumberOfVisitorsPerDayr = function () {
-//   return this.findTotalNumberOfVisitorsPerDay() * 365;
-// };
-//
+Park.prototype.visitorsPerDay = function() {
+  let TotalNumberOfVisitorsPerDay = 0;
+  const TotalNumberOfVisitorsPerDay = 0;
+  for (dinosaur of this.collectionOfDinosaurs) {
+    TotalNumberOfVisitorsPerDay += dinosaur.guestsAttractedPerDay
+     }
+     return totalNumberOfVisitorsPerDay
+  }
 
 
-// Park.prototype.calculateYearlyRevenue = function () {
-//   return this.visitorsPerYear() * this.price;
-// };
+Park.prototype.visitorsPerYear = function () {
+  return this.visitorsPerDay() * 365;
+};
+
+
+
+Park.prototype.yearlyRevenue = function () {
+  return this.visitorsPerYear() * this.price;
+};
 
 module.exports = Park;
